@@ -3,10 +3,11 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Convocatorias from './components/Convocatorias';
-import Organismos from './components/organismos'; 
+import Organismos from './components/Organismos'; 
 import Navigation from './components/Navigation';
 import Departamentos from './components/Departamentos';
 import Investigadores from './components/Investigadores';
+import GruposInvestigacion from './components/GrupoInvestigacion';
 import Solicitudes from './components/Solicitudes';
 
 
@@ -16,6 +17,7 @@ function App() {
       <Navigation /> {/* Include the Navigation component */}
         <Routes>
           <Route path="/investigadores" element={<Investigadores />} />
+          <Route path="/grupos_investigacion" element={<GruposInvestigacion />} />
           <Route path="/convocatorias" element={<Convocatorias />} />
           <Route path="/organismos" element={<Organismos  />} />
           <Route path="/departamentos" element={<Departamentos />} />

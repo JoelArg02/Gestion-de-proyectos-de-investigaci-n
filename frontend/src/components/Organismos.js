@@ -68,12 +68,14 @@ const Organismos = () => {
   const deleteOrganismo = async (id) => {
     const url = `http://localhost:4000/organismos/${id}`;
     try {
+      console.log('Eliminando organismo...');
       const response = await fetch(url, { method: 'DELETE' });
       if (!response.ok) {
         throw new Error('Hubo un problema al eliminar el organismo');
       }
       setOrganismos(organismos.filter(org => org.id_organismo !== id));
     } catch (error) {
+      console.error('Error al eliminar organismo:', error);
       console.error('Error:', error);
     }
   };
